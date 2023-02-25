@@ -61,7 +61,7 @@ bindkey '^[[B' history-substring-search-down
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### Functions
-function UPG() {sudo apt -Syu; yay -Syu; zinit self-update; zinit update --all}
+function UPG() {sudo apt update; sudo apt upgrade; zinit self-update; zinit update --all}
 function runcpp() {command g++ -O2 $1 -std=c++17 -I ~/C++/include -g -fsanitize=undefined,address; ./a.out}
 
 ### Aliases
